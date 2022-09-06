@@ -72,4 +72,12 @@ public class Restaurant {
         return name;
     }
 
+    //Created for GetTotalVal !
+    public String getTotalOrderValue(){
+        List <String> names=new ArrayList<>();
+        names.add("Sweet corn soup1");
+        names.add("Vegetable lasagne1");
+        return getTotalOrderValue();
+    }
+
 }

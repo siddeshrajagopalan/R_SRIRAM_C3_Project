@@ -1,7 +1,10 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.security.PublicKey;
 import java.time.LocalTime;
+import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -57,4 +60,16 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    //Part-3 Failling Test Case TDD
+    @Test
+    public void viewing_total_ordered_value_of_selected_items_from_menu_list() {
+        //restaurant.addToMenu("Sweet corn soup", 119);
+        //restaurant.addToMenu("Vegetable lasagne", 269);
+        //restaurant.addToMenu("Sizzling brownie", 319);
+        //assertNull(restaurant.getTotalOrderValue());
+
+        assertNotNull(restaurant.getTotalOrderValue());
+        //restaurant.displayDetails();
+    }
 }
