@@ -1,7 +1,6 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.security.PublicKey;
 import java.time.LocalTime;
 import java.util.Arrays;
 import java.util.List;
@@ -61,15 +60,18 @@ class RestaurantTest {
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-    //Part-3 Failling Test Case TDD
+    //Part-3 Implemented feature for calculating order value & Testing for Positive Case ...
     @Test
     public void viewing_total_ordered_value_of_selected_items_from_menu_list() {
         //restaurant.addToMenu("Sweet corn soup", 119);
         //restaurant.addToMenu("Vegetable lasagne", 269);
         //restaurant.addToMenu("Sizzling brownie", 319);
-        //assertNull(restaurant.getTotalOrderValue());
-
-        assertNotNull(restaurant.getTotalOrderValue());
         //restaurant.displayDetails();
+
+        int totalOrder;
+        List<String> items = Arrays.asList("Sweet corn soup","Vegetable lasagne");
+        totalOrder= restaurant.getTotalOrderValue(items);
+        assertEquals(388, totalOrder);
+        System.out.println(totalOrder);
     }
 }
